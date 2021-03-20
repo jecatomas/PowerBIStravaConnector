@@ -149,7 +149,7 @@ StravaData.Page = (url as text, page as number, contentType as text) as nullable
     let
         queryOptions = [
             page = Number.ToText(page),
-            page_size = Text.From(page_size)
+            per_page = Text.From(page_size)
         ],
         content = Web.Contents(url, [ Query = queryOptions ]),
         json = Json.Document(content),
